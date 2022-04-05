@@ -1,19 +1,23 @@
 package userExcercise.model;
 
+import javax.persistence.*;
 
+
+
+@Entity
+@Table(name = "Users")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String email;
     private String password;
 
-    public User(int id) {
 
-    }
 
-    public User( String email, String password) {
-        this.id = id;
-        this.email = email;
-        this.password = password;
+    public User()
+    {
+
     }
 
     public int getId() {
